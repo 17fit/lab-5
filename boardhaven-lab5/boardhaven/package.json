@@ -1,0 +1,13 @@
+{
+  "name": "boardhaven",
+  "version": "1.0.0",
+  "description": "BoardHaven — вебзастосунок клубу настільних ігор (Express + SQLite)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=22.13" },
+  "dependencies": { "express": "^4.21.2" },
+  "license": "UNLICENSED"
+}

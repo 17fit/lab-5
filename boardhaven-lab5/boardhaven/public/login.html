@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Вхід в акаунт клубу настільних ігор BoardHaven.">
+  <title>Вхід — BoardHaven</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a class="logo" href="index.html">BoardHaven</a>
+      <nav class="navbar__nav" aria-label="Основна навігація">
+        <ul class="navbar__list">
+          <li><a class="navbar__link" href="index.html">Головна</a></li>
+          <li><a class="navbar__link" href="games.html">Каталог</a></li>
+          <li><a class="navbar__link" href="events.html">Події</a></li>
+          <li><a class="navbar__link" href="my-bookings.html">Мої бронювання</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary navbar__login" href="login.html">Увійти</a>
+    </div>
+  </header>
+  <main id="main">
+    <div class="container">
+      <section class="auth" aria-labelledby="login-t">
+        <h1 class="page-title" id="login-t">Вхід</h1>
+        <form id="login-form" action="#" method="post" novalidate>
+          <div class="field"><label for="email">Електронна пошта</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="name@example.com"><p class="field__error" id="err-email" role="alert" hidden></p></div>
+          <div class="field"><label for="password">Пароль</label><input id="password" name="password" type="password" required minlength="6" autocomplete="current-password"><p class="field__error" id="err-password" role="alert" hidden></p></div>
+          <button class="btn btn--primary" type="submit">Увійти</button>
+        </form>
+        <p class="auth__alt">Ще немає акаунта? <button class="link-btn" type="button" data-open="modal-register">Створити акаунт</button></p>
+      </section>
+    </div>
+    <dialog class="modal modal--success" id="modal-success" aria-labelledby="modal-success-t">
+      <h2 id="modal-success-t">Вхід виконано</h2>
+      <p>Ласкаво просимо до BoardHaven!</p>
+      <div class="modal__actions"><a class="btn btn--primary" href="index.html">На головну</a></div>
+    </dialog>
+    <dialog class="modal modal--confirm" id="modal-register" aria-labelledby="modal-register-t">
+      <h2 id="modal-register-t">Створення акаунта</h2>
+      <p>Реєстрація буде доступна на наступному етапі проєкту. Поки що можна користуватися сайтом без акаунта.</p>
+      <div class="modal__actions"><button class="btn btn--primary" type="button" data-close>Зрозуміло</button></div>
+    </dialog>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <section aria-labelledby="f1"><h2 id="f1">BoardHaven</h2><p>Клуб настільних ігор для тих, хто любить грати разом.</p></section>
+      <section aria-labelledby="f2"><h2 id="f2">Контакти</h2>
+        <address>вул. Прикладна, 12, Київ<br><a href="tel:+380441234567">+38 (044) 123-45-67</a><br><a href="mailto:hello@boardhaven.example">hello@boardhaven.example</a></address></section>
+      <section aria-labelledby="f3"><h2 id="f3">Графік роботи</h2><p>Пн–Чт: 14:00–23:00<br>Пт–Нд: 12:00–01:00</p></section>
+      <p class="footer__copy">© 2026 BoardHaven. Навчальний проєкт, лабораторна робота № 5.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

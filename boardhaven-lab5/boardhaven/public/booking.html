@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Онлайн-бронювання столу в клубі настільних ігор BoardHaven у три кроки.">
+  <title>Бронювання — BoardHaven</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a class="logo" href="index.html">BoardHaven</a>
+      <nav class="navbar__nav" aria-label="Основна навігація">
+        <ul class="navbar__list">
+          <li><a class="navbar__link" href="index.html">Головна</a></li>
+          <li><a class="navbar__link" href="games.html" aria-current="page">Каталог</a></li>
+          <li><a class="navbar__link" href="events.html">Події</a></li>
+          <li><a class="navbar__link" href="my-bookings.html">Мої бронювання</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary navbar__login" href="login.html">Увійти</a>
+    </div>
+  </header>
+  <main id="main">
+    <div class="container--narrow" id="wizard">
+      <h1 class="page-title" id="wizard-title" tabindex="-1">Бронювання</h1>
+      <ol class="steps" aria-label="Кроки бронювання">
+        <li aria-current="step">1. Дата й час</li>
+        <li>2. Стіл</li>
+        <li>3. Підтвердження</li>
+      </ol>
+
+      <section class="step" data-step="1" aria-label="Дата й час">
+        <div class="field"><span class="field__label" id="l-date">Дата</span><div class="tags" id="dates" role="group" aria-labelledby="l-date"></div></div>
+        <div class="field"><span class="field__label" id="l-time">Час (слот 2 години)</span>
+          <div class="slots" id="times" role="group" aria-labelledby="l-time">
+            <button class="slot" type="button" aria-pressed="false" data-time="14:00">14:00</button>
+            <button class="slot" type="button" aria-pressed="false" data-time="16:00">16:00</button>
+            <button class="slot" type="button" aria-pressed="false" data-time="18:00">18:00</button>
+            <button class="slot" type="button" aria-pressed="false" data-time="20:00">20:00</button>
+          </div>
+        </div>
+        <div class="field field--inline"><label for="guests">Гравці</label><select class="select" id="guests" name="guests"></select></div>
+        <p class="hint hint--error" id="hint-time" role="alert" hidden>Оберіть час, щоб продовжити.</p>
+        <div class="actions"><button class="btn btn--primary" type="button" id="to-2">Далі</button></div>
+      </section>
+
+      <section class="step" data-step="2" aria-label="Вибір столу" hidden>
+        <div class="slots slots--tables" id="tables" role="group" aria-label="Столи"></div>
+        <p class="hint">Зайняті столи та столи замалі для вашої компанії недоступні.</p>
+        <p class="hint hint--error" id="hint-table" role="alert" hidden>Оберіть стіл, щоб продовжити.</p>
+        <p class="hint hint--error" id="hint-conflict" role="alert" hidden></p>
+        <div class="actions"><button class="btn btn--secondary" type="button" id="back-1">Назад</button><button class="btn btn--primary" type="button" id="to-3">Далі</button></div>
+      </section>
+
+      <section class="step" data-step="3" aria-label="Підтвердження" hidden>
+        <article class="summary">
+          <h2 id="sum-game">Catan</h2>
+          <dl>
+            <dt class="sr-only">Дата й час</dt><dd id="sum-date"></dd>
+            <dt class="sr-only">Стіл</dt><dd id="sum-table"></dd>
+            <dt class="sr-only">Гравців</dt><dd id="sum-guests"></dd>
+          </dl>
+        </article>
+        <div class="field"><label for="b-name">Ім’я</label><input id="b-name" name="name" autocomplete="name"><p class="field__error" id="err-b-name" role="alert" hidden></p></div>
+        <div class="field"><label for="b-phone">Телефон</label><input id="b-phone" name="phone" type="tel" placeholder="+380 50 123 45 67" autocomplete="tel"><p class="field__error" id="err-b-phone" role="alert" hidden></p></div>
+        <p class="hint hint--error" id="hint-confirm" role="alert" hidden></p>
+        <div class="actions"><button class="btn btn--secondary" type="button" id="back-2">Назад</button><button class="btn btn--primary" type="button" id="confirm-booking">Підтвердити бронювання</button></div>
+      </section>
+    </div>
+    <dialog class="modal modal--success" id="modal-success" aria-labelledby="modal-success-t">
+      <h2 id="modal-success-t">Стіл заброньовано</h2>
+      <p>Ми чекаємо на вас у клубі. Бронювання з’явиться на сторінці «Мої бронювання».</p>
+      <div class="modal__actions"><a class="btn btn--secondary" href="index.html">На головну</a><a class="btn btn--primary" href="my-bookings.html">Мої бронювання</a></div>
+    </dialog>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <section aria-labelledby="f1"><h2 id="f1">BoardHaven</h2><p>Клуб настільних ігор для тих, хто любить грати разом.</p></section>
+      <section aria-labelledby="f2"><h2 id="f2">Контакти</h2>
+        <address>вул. Прикладна, 12, Київ<br><a href="tel:+380441234567">+38 (044) 123-45-67</a><br><a href="mailto:hello@boardhaven.example">hello@boardhaven.example</a></address></section>
+      <section aria-labelledby="f3"><h2 id="f3">Графік роботи</h2><p>Пн–Чт: 14:00–23:00<br>Пт–Нд: 12:00–01:00</p></section>
+      <p class="footer__copy">© 2026 BoardHaven. Навчальний проєкт, лабораторна робота № 5.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

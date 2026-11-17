@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Турніри та вечори гри в клубі BoardHaven: запис на подію або у список очікування.">
+  <title>Події клубу — BoardHaven</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a class="logo" href="index.html">BoardHaven</a>
+      <nav class="navbar__nav" aria-label="Основна навігація">
+        <ul class="navbar__list">
+          <li><a class="navbar__link" href="index.html">Головна</a></li>
+          <li><a class="navbar__link" href="games.html">Каталог</a></li>
+          <li><a class="navbar__link" href="events.html" aria-current="page">Події</a></li>
+          <li><a class="navbar__link" href="my-bookings.html">Мої бронювання</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary navbar__login" href="login.html">Увійти</a>
+    </div>
+  </header>
+  <main id="main">
+    <div class="container--narrow">
+      <h1 class="page-title">Події клубу</h1>
+      <div class="tags" role="group" aria-label="Тип події">
+        <button class="tag" type="button" aria-pressed="true" data-kind="all">Усі</button>
+        <button class="tag" type="button" aria-pressed="false" data-kind="tournament">Турніри</button>
+        <button class="tag" type="button" aria-pressed="false" data-kind="evening">Вечори гри</button>
+      </div>
+      <div class="rows rows--spaced" id="events">
+        <article class="row" data-kind="tournament" data-full="false">
+          <div><h2 class="row__title">Турнір з Catan</h2><p class="row__meta"><time>Сб, 19:00</time></p></div>
+          <div class="row__side"><span class="badge badge--warning">Вільних місць: 2</span><button class="btn btn--primary btn--sm" type="button" data-event-btn data-open="modal-confirm">Записатися</button></div>
+        </article>
+        <article class="row" data-kind="evening" data-full="false">
+          <div><h2 class="row__title">Вечір кооперативних ігор</h2><p class="row__meta"><time>Нд, 18:00</time></p></div>
+          <div class="row__side"><span class="badge badge--success">Вільних місць: 9</span><button class="btn btn--primary btn--sm" type="button" data-event-btn data-open="modal-confirm">Записатися</button></div>
+        </article>
+        <article class="row" data-kind="evening" data-full="true">
+          <div><h2 class="row__title">Драфт-вечір 7 Wonders</h2><p class="row__meta"><time>Пт, 20:00</time></p></div>
+          <div class="row__side"><span class="badge badge--danger">Місць немає</span><button class="btn btn--primary btn--sm" type="button" data-event-btn data-open="modal-confirm">У список очікування</button></div>
+        </article>
+      </div>
+    </div>
+    <dialog class="modal modal--confirm" id="modal-confirm" aria-labelledby="mc-title">
+      <h2 id="mc-title">Записатися на подію?</h2>
+      <p id="mc-text"></p>
+      <div class="modal__actions"><button class="btn btn--secondary" type="button" data-close>Скасувати</button><button class="btn btn--primary" type="button" id="confirm-yes">Підтвердити</button></div>
+    </dialog>
+    <dialog class="modal modal--success" id="modal-success" aria-labelledby="ms-title">
+      <h2 id="ms-title">Ви записані</h2>
+      <p id="ms-text"></p>
+      <div class="modal__actions"><button class="btn btn--primary" type="button" data-close>Готово</button></div>
+    </dialog>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <section aria-labelledby="f1"><h2 id="f1">BoardHaven</h2><p>Клуб настільних ігор для тих, хто любить грати разом.</p></section>
+      <section aria-labelledby="f2"><h2 id="f2">Контакти</h2>
+        <address>вул. Прикладна, 12, Київ<br><a href="tel:+380441234567">+38 (044) 123-45-67</a><br><a href="mailto:hello@boardhaven.example">hello@boardhaven.example</a></address></section>
+      <section aria-labelledby="f3"><h2 id="f3">Графік роботи</h2><p>Пн–Чт: 14:00–23:00<br>Пт–Нд: 12:00–01:00</p></section>
+      <p class="footer__copy">© 2026 BoardHaven. Навчальний проєкт, лабораторна робота № 5.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

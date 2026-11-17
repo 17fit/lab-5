@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Каталог настільних ігор клубу BoardHaven з фільтрами за гравцями, часом і складністю.">
+  <title>Каталог ігор — BoardHaven</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a class="logo" href="index.html">BoardHaven</a>
+      <nav class="navbar__nav" aria-label="Основна навігація">
+        <ul class="navbar__list">
+          <li><a class="navbar__link" href="index.html">Головна</a></li>
+          <li><a class="navbar__link" href="games.html" aria-current="page">Каталог</a></li>
+          <li><a class="navbar__link" href="events.html">Події</a></li>
+          <li><a class="navbar__link" href="my-bookings.html">Мої бронювання</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary navbar__login" href="login.html">Увійти</a>
+    </div>
+  </header>
+  <main id="main">
+    <div class="container">
+      <h1 class="page-title">Каталог ігор</h1>
+      <div class="tags" role="group" aria-label="Фільтри ігор"><button class="tag" type="button" aria-pressed="false" data-filter="players-2">2 гравці</button><button class="tag" type="button" aria-pressed="false" data-filter="players-4">4 гравці</button><button class="tag" type="button" aria-pressed="false" data-filter="players-6">6 і більше</button><button class="tag" type="button" aria-pressed="false" data-filter="time-30">до 30 хв</button><button class="tag" type="button" aria-pressed="false" data-filter="time-60">до 60 хв</button><button class="tag" type="button" aria-pressed="false" data-filter="diff-low">складність 1–2</button><button class="tag" type="button" aria-pressed="false" data-filter="diff-high">складність 3+</button></div>
+      <div class="tools">
+        <label class="sr-only" for="search">Пошук за назвою</label>
+        <input class="input" id="search" type="search" placeholder="Пошук за назвою" autocomplete="off">
+        <label class="sr-only" for="sort">Сортування</label>
+        <select class="select" id="sort"><option value="name">За назвою</option><option value="time">За тривалістю</option><option value="diff">За складністю</option></select>
+      </div>
+      <p class="result-count" id="result-count" aria-live="polite">Знайдено ігор: 6</p>
+      <p class="empty" id="empty" hidden>Немає ігор, що відповідають усім обраним умовам. Спробуйте зняти один із фільтрів.</p>
+      <ul class="cards" id="catalog">
+          <li>
+            <article class="card" data-min="3" data-max="4" data-time="90" data-diff="2">
+              <div class="card__cover cover--purple" aria-hidden="true">C</div>
+              <h3 class="card__title">Catan</h3>
+              <p class="card__meta">3–4 гравців · 90 хв · складність 2/5</p>
+              <p class="card__status"><span class="badge badge--success">Вільних копій: 2</span><span><span aria-hidden="true">★</span> 4.6<span class="sr-only"> із 5</span></span></p>
+              <a class="btn btn--secondary btn--sm" href="game-catan.html">Відкрити</a>
+            </article>
+          </li>
+          <li>
+            <article class="card" data-min="3" data-max="8" data-time="30" data-diff="1">
+              <div class="card__cover cover--red" aria-hidden="true">D</div>
+              <h3 class="card__title">Dixit</h3>
+              <p class="card__meta">3–8 гравців · 30 хв · складність 1/5</p>
+              <p class="card__status"><span class="badge badge--success">Вільних копій: 3</span><span><span aria-hidden="true">★</span> 4.7<span class="sr-only"> із 5</span></span></p>
+              <a class="btn btn--secondary btn--sm" href="game-dixit.html">Відкрити</a>
+            </article>
+          </li>
+          <li>
+            <article class="card" data-min="2" data-max="4" data-time="60" data-diff="3">
+              <div class="card__cover cover--green" aria-hidden="true">P</div>
+              <h3 class="card__title">Pandemic</h3>
+              <p class="card__meta">2–4 гравців · 60 хв · складність 3/5</p>
+              <p class="card__status"><span class="badge badge--danger">Усі копії зайняті</span><span><span aria-hidden="true">★</span> 4.5<span class="sr-only"> із 5</span></span></p>
+              <a class="btn btn--secondary btn--sm" href="game-pandemic.html">Відкрити</a>
+            </article>
+          </li>
+          <li>
+            <article class="card" data-min="2" data-max="5" data-time="45" data-diff="2">
+              <div class="card__cover cover--amber" aria-hidden="true">Ca</div>
+              <h3 class="card__title">Carcassonne</h3>
+              <p class="card__meta">2–5 гравців · 45 хв · складність 2/5</p>
+              <p class="card__status"><span class="badge badge--success">Вільних копій: 1</span><span><span aria-hidden="true">★</span> 4.4<span class="sr-only"> із 5</span></span></p>
+              <a class="btn btn--secondary btn--sm" href="game-carcassonne.html">Відкрити</a>
+            </article>
+          </li>
+          <li>
+            <article class="card" data-min="4" data-max="8" data-time="20" data-diff="1">
+              <div class="card__cover cover--blue" aria-hidden="true">Co</div>
+              <h3 class="card__title">Codenames</h3>
+              <p class="card__meta">4–8 гравців · 20 хв · складність 1/5</p>
+              <p class="card__status"><span class="badge badge--success">Вільних копій: 2</span><span><span aria-hidden="true">★</span> 4.5<span class="sr-only"> із 5</span></span></p>
+              <a class="btn btn--secondary btn--sm" href="game-codenames.html">Відкрити</a>
+            </article>
+          </li>
+          <li>
+            <article class="card" data-min="1" data-max="5" data-time="60" data-diff="3">
+              <div class="card__cover cover--teal" aria-hidden="true">W</div>
+              <h3 class="card__title">Wingspan</h3>
+              <p class="card__meta">1–5 гравців · 60 хв · складність 3/5</p>
+              <p class="card__status"><span class="badge badge--success">Вільних копій: 1</span><span><span aria-hidden="true">★</span> 4.8<span class="sr-only"> із 5</span></span></p>
+              <a class="btn btn--secondary btn--sm" href="game-wingspan.html">Відкрити</a>
+            </article>
+          </li>
+      </ul>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <section aria-labelledby="f1"><h2 id="f1">BoardHaven</h2><p>Клуб настільних ігор для тих, хто любить грати разом.</p></section>
+      <section aria-labelledby="f2"><h2 id="f2">Контакти</h2>
+        <address>вул. Прикладна, 12, Київ<br><a href="tel:+380441234567">+38 (044) 123-45-67</a><br><a href="mailto:hello@boardhaven.example">hello@boardhaven.example</a></address></section>
+      <section aria-labelledby="f3"><h2 id="f3">Графік роботи</h2><p>Пн–Чт: 14:00–23:00<br>Пт–Нд: 12:00–01:00</p></section>
+      <p class="footer__copy">© 2026 BoardHaven. Навчальний проєкт, лабораторна робота № 5.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

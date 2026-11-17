@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wingspan — опис гри та бронювання столу в клубі BoardHaven.">
+  <title>Wingspan — BoardHaven</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a class="logo" href="index.html">BoardHaven</a>
+      <nav class="navbar__nav" aria-label="Основна навігація">
+        <ul class="navbar__list">
+          <li><a class="navbar__link" href="index.html">Головна</a></li>
+          <li><a class="navbar__link" href="games.html" aria-current="page">Каталог</a></li>
+          <li><a class="navbar__link" href="events.html">Події</a></li>
+          <li><a class="navbar__link" href="my-bookings.html">Мої бронювання</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary navbar__login" href="login.html">Увійти</a>
+    </div>
+  </header>
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Хлібні крихти"><a href="games.html">Каталог ігор</a> / Wingspan</nav>
+      <div class="detail">
+        <div class="detail__cover cover--teal" aria-hidden="true">W</div>
+        <article>
+          <h1 class="page-title">Wingspan</h1>
+          <p><span class="badge badge--success">Вільних копій: 1</span></p>
+          <p class="detail__lead">Приваблюйте птахів у свій заповідник, будуйте ланцюги здібностей і набирайте очки.</p>
+          <dl class="specs">
+            <dt>Гравців</dt><dd>1–5</dd>
+            <dt>Тривалість</dt><dd>60 хв</dd>
+            <dt>Складність</dt><dd>3/5</dd>
+            <dt>Рейтинг</dt><dd>★ 4.8</dd>
+            <dt>Вільних копій</dt><dd>1</dd>
+          </dl>
+          <div class="detail__actions">
+            <a class="btn btn--secondary" href="games.html">До каталогу</a>
+            <a class="btn btn--primary" href="booking.html?game=wingspan">Забронювати стіл</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <section aria-labelledby="f1"><h2 id="f1">BoardHaven</h2><p>Клуб настільних ігор для тих, хто любить грати разом.</p></section>
+      <section aria-labelledby="f2"><h2 id="f2">Контакти</h2>
+        <address>вул. Прикладна, 12, Київ<br><a href="tel:+380441234567">+38 (044) 123-45-67</a><br><a href="mailto:hello@boardhaven.example">hello@boardhaven.example</a></address></section>
+      <section aria-labelledby="f3"><h2 id="f3">Графік роботи</h2><p>Пн–Чт: 14:00–23:00<br>Пт–Нд: 12:00–01:00</p></section>
+      <p class="footer__copy">© 2026 BoardHaven. Навчальний проєкт, лабораторна робота № 5.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
